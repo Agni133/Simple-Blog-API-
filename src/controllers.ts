@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import client from "./db";
 import { Post } from "./models";
 
-// ✅ Create Post
+//  Create Post
 export const createPost = async (req: Request, res: Response) => {
   try {
     const { title, content } = req.body;
@@ -16,7 +16,7 @@ export const createPost = async (req: Request, res: Response) => {
   }
 };
 
-// ✅ Get All Posts
+// Get All Posts
 export const getAllPosts = async (_req: Request, res: Response) => {
   try {
     const result = await client.query("SELECT * FROM posts");
@@ -28,7 +28,7 @@ export const getAllPosts = async (_req: Request, res: Response) => {
 
 
 
-// ✅ Delete Post
+//  Delete Post
 export const deletePost = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
